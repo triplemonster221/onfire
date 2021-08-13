@@ -1,0 +1,54 @@
+html {
+	box-sizing: border-box;
+	height: 100%;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 15px;
+	color: #000;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+p {
+	margin: 0;
+}
+
+ul,li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color:inherit;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	margin: 0;
+}
+
+h2 {
+
+}
+
+input,
+textarea {
+	font-family: inherit;
+}
+
+.container {
+	max-width:1200px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
