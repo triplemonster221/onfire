@@ -65,11 +65,7 @@ textarea {
   width: 100%;
   color: #fff;
   background: #ffc300;
-  transition: background .3s ease;
-}
-
-.btn:hover {
-  background: #f2bc0e;
+  
 }
 
 h2 {
@@ -91,7 +87,6 @@ h2 {
   background: linear-gradient(57.79deg, rgba(53, 13, 111, 0.58) 27.19%, rgba(56, 32, 87, 0.29) 81.02%), url(../images/header-bg.jpg)no-repeat center top/cover;
   color: #fff;
   text-align: center;
-  height: 100vh;
 }
 
 .header-line {
@@ -107,7 +102,7 @@ h2 {
 
 .menu__list li {
   transition: border .3s ease;
-  padding:31px 23px 31px 23px;
+  padding:32px 23px 34px;
   border-bottom: 2px solid transparent;
   font-size: 16px;
   line-height: 140%;
@@ -143,8 +138,7 @@ h2 {
 }
 
 .offer {
-  padding: 71px 0 84px;
-  margin-bottom: 64px;
+  padding: 71px 0 168px;
 }
 
 .header-title {
@@ -189,6 +183,16 @@ h2 {
   color: #fff;
 }
 
+.btn_header {
+  transition: background .3s ease;
+}
+
+.btn_header:hover {
+  background: #d3a718;
+}
+
+
+
 /*=================================================================*/
 /*categories=================================================================*/
 .categories {
@@ -225,38 +229,48 @@ h2 {
 }
 
 .categories-list__img {
+  display: block;
   width: 40px;
-  height: 40px;
+  height: auto;
+  margin: 0 auto 15px;
+  object-fit: cover;
 }
 
 /*=================================================================*/
 /*business=================================================================*/
 
 .text_only {
-  display: block;
   max-width: 561px;
-  width: 100%;
+  font-size: 16px;
   margin-bottom: 78px;
 }
 
 .business-wrap {
   display: flex;
   flex-wrap: wrap;
+  margin: 0 -47px;
 }
 
 .business-box {
-  flex: 1 1 50%;
+  flex: 1 0 50%;
   display: flex;
   align-items: center;
+  padding: 0 47px;
   margin-bottom: 51px;
 }
 
 .business-box-img {
   width: 210px;
   margin-right: 25px;
+  border-radius: 0px 10px 10px 10px;
+  object-fit: cover;
+  border: 1px solid transparent;
+  transition: all .3s ease;
+}
+
+.business-box__link:hover .business-box-img {
   border: 1px solid #000000;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  border-radius: 0px 10px 10px 10px;
 }
 
 .business-box__info {
@@ -282,6 +296,14 @@ h3 {
   
 .business-box__money {
   color: #FF4975;
+}
+
+.business_btn {
+  transition: background .3s ease;
+}
+
+.business_btn:hover {
+  background: #d3a718;
 }
 
 /*=================================================================*/
@@ -315,6 +337,7 @@ h3 {
   margin-right: 20px;
   position: relative;
   overflow: hidden;
+  border-radius: 10px;
 }
 
 .project-box__img {
@@ -331,7 +354,6 @@ h3 {
 
 .project-box:hover {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
 }
 
 .project-box:hover.project-box::after {
@@ -366,12 +388,13 @@ h3 {
 }
 
 .project__item {
-  padding-top: 50px;
+  margin-top: 50px;
   display: flex;
   justify-content: space-between;
 }
 
 .project__list {
+  width: 135px;
   text-align: center;
 }
 
@@ -412,35 +435,43 @@ h3 {
  font-size: 16px;
  margin-bottom: 26px;
  height: 127px;
- overflow-x: scroll;
+ overflow-y: auto;
 }
 
 .project-rulles__btn {
+  position: relative;
+  z-index: 5;
   margin: 0 auto;
+  transition: background .3s ease;
+}
+
+.project-rulles__btn:hover {
+  background: #d3a718;
 }
 
 /*=================================================================*/
 /*vidio=================================================================*/
 
 .vidio {
-  padding: 210px 0 165px;
+  padding: 311px 0 165px;
   text-align: center;
 }
 
 .vidio-text {
-  display: block;
   width: 500px;
   margin: 0 auto;
 }
 
-.video-frame {
-  display: block;
-  margin: 0 auto;
+.vidio-wrap {
   width: 830px;
+  margin: 0 auto;
+  margin-top: 78px;
   height: 426px;
+}
+
+.video-frame {  
   box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
   border-radius: 10px;
-  margin-top: 78px;
 }
 
 /*=================================================================*/
@@ -457,7 +488,7 @@ h3 {
 }
 
 .footer-column:nth-child(3) {
-  padding-top: 50px;
+  margin: auto 0;
 }
 
 .footer-title_one {
@@ -514,17 +545,21 @@ h3 {
   position: relative;
 }
 
+.form:hover .form__input {
+  box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
+}
+
 .form__input {
   max-width: 385px;
   width: 100%;
   background-color: #fff;
   border: 1px solid #F2F2F2;
-  box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
   border-radius: 30px;
   font-size: 13px;
   line-height: 21px;
   padding: 11px 10px 11px 33px;
   outline: none;
+  transition: box-shadow .2s ease;
 }
 
 .btn_form {
@@ -536,6 +571,11 @@ h3 {
   outline: none;
   right: 0;
   cursor: pointer;
+  transition: background .3s ease;
+}
+
+.btn_form:hover {
+  background: #d3a718;
 }
 
 
