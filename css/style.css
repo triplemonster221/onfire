@@ -248,14 +248,13 @@ h2 {
 .business-wrap {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -47px;
+  justify-content: space-between;
 }
 
 .business-box {
-  flex: 1 0 50%;
+  flex: 0 1 508px;
   display: flex;
   align-items: center;
-  padding: 0 47px;
   margin-bottom: 51px;
 }
 
@@ -311,7 +310,7 @@ h3 {
 
 .project {
   position: relative;
-  padding: 100px 0 205px;
+  padding: 100px 0 10px;
   background: #F7F6F8;
 }
 
@@ -322,6 +321,7 @@ h3 {
 .project-wrap {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   padding: 78px 0 89px;
   border-bottom: 1px solid #B8B8B8;
 }
@@ -330,15 +330,12 @@ h3 {
   max-width: 345px;
   width: 100%;
   height: 265px;
-  margin-bottom: 20px;
-}
-
-.project-box {
-  margin-right: 20px;
+  margin-bottom: 28px;
   position: relative;
   overflow: hidden;
   border-radius: 10px;
 }
+
 
 .project-box__img {
   display: none;
@@ -388,7 +385,7 @@ h3 {
 }
 
 .project__item {
-  margin-top: 50px;
+  margin: 50px 0 80px;
   display: flex;
   justify-content: space-between;
 }
@@ -412,17 +409,18 @@ h3 {
 }
 
 .project-rulles {
-  position: absolute;
+/*  position: absolute;
   bottom: 0;
   left: 50%;
   bottom: -16%;
-  transform: translateX(-50%);
+  transform: translateX(-50%);*/
+
   max-width: 801px;
-  height: 326px;
+  /*height: 326px;*/
   width: 100%;
   background: #F4EAFF;
   border-radius: 15px;
-  margin: 0 auto;
+  margin: 0 auto -175px;
   padding: 52px 88px 52px;
   text-align: center;
 }
@@ -453,25 +451,28 @@ h3 {
 /*vidio=================================================================*/
 
 .vidio {
-  padding: 311px 0 165px;
+  padding: 311px 0 103px;
   text-align: center;
 }
 
 .vidio-text {
-  width: 500px;
+  max-width: 500px;
+  width: 100%;
   margin: 0 auto;
 }
 
 .vidio-wrap {
-  width: 830px;
+  max-width: 830px;
   margin: 0 auto;
   margin-top: 78px;
-  height: 426px;
+  padding-bottom: 62px;
+  border-bottom: 1px solid #E0E0E0;
 }
 
 .video-frame {  
   box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
   border-radius: 10px;
+  width: 100%;
 }
 
 /*=================================================================*/
@@ -485,6 +486,7 @@ h3 {
 .footer__inner {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .footer-column:nth-child(3) {
@@ -576,6 +578,148 @@ h3 {
 
 .btn_form:hover {
   background: #d3a718;
+}
+
+/*  RESPONSIVE  */
+
+/* Large: 992px - 1199px */
+@media (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+  }
+    .footer__inner {
+    justify-content: end;
+  }
+   .footer-column {
+    margin:0 100px 82px 0;
+   }
+  .footer-column:last-child {
+    margin:0 0 82px 0;
+  }
+  .business-box {
+    flex: 1 1 508px;
+  }
+}
+
+
+/* Medium: 768px - 991px */
+
+@media (max-width: 991px) {
+  .container {
+    max-width: 720px;
+  }
+  .footer__inner {
+    justify-content: end;
+  }
+/*  .footer-column:first-child {
+    margin:0 100px 82px 0;
+  }*/
+  .categories {
+    display: none;
+  }
+  .tel {
+    display: none;
+  }
+  .project-box:nth-of-type(2n + 1) {
+    margin-right: 30px;
+  }
+  .project-wrap {
+    justify-content: center;
+  }
+  .vidio-wrap {
+    width: 100%;
+    height: 430px;
+  }
+
+  .video-frame {
+    height: 100%
+  }
+
+}
+
+
+/* Small: 576px - 767px */
+@media (max-width: 767px) {
+  .container {
+    max-width: 540px;
+  }
+  .header-title {
+    font-size: 38px
+  }
+  h2 {
+    font-size: 28px
+  }
+ .menu {
+  display: none
+ }
+
+.tel {
+    display: block;
+    padding: 32px 23px 34px;
+  }
+.business-box {
+  flex: 0 1 508px;
+}
+
+.project-wrap {
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-box:nth-of-type(2n + 1) {
+  margin-right: 0 ;
+}
+
+.project__item {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project__list {
+  margin-bottom: 24px
+}
+
+.vidio-wrap {
+   height: 300px; 
+}
+
+}
+
+/* Extra small: 320px - 575px */
+@media (max-width: 575px) {
+  .container {
+    padding: 0 15px;
+    width: auto;
+  }
+  .header-title {
+    font-size: 30px;
+  }
+  .business-box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #d8d4d4;
+  }
+  .business-box:last-child {
+    border-bottom: none;
+  }
+  .business-box-img {
+    margin-right: 0;
+  }
+  .project__item {
+    justify-content: space-between;
+  }
+  .project-rulles {
+    padding: 25px 15px;
+  }
+  .footer-column {
+    margin: 0 0 82px 0;
+  }
+  .business_btn {
+    margin: 0 auto;
+  }
 }
 
 
